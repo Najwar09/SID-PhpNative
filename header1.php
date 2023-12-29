@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Desa Samangki</title>
+    <title>Desa Bonea Timur</title>
 
-    <meta name="description" content="Desa Samangki">
+    <meta name="description" content="Desa Bonea Timur">
     <meta name="keywords" content="">
     <meta name="author" content="tabthemes">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="img/samangki/maros.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/samangki/maros_02.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/samangki/maros_03.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/samangki/maros_04.png">
+    <link rel="shortcut icon" href="img/bonea/logo_selayar.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/bonea/maros_02.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/bonea/maros_03.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/bonea/maros_04.png">
     
 
     <!-- Google Web Fonts -->
@@ -74,7 +74,7 @@
                             <div class="logo-container">
                                 <div class="logo-wrap local-scroll">
                                     <a href="index.php">
-                                        <img class="logo" src="img/samangki/maros.png" alt="logo" data-rjs="2">
+                                        <img class="logo" src="img/bonea/logo_selayar.png" alt="logo" data-rjs="2" style="width: 50px;">
                                     </a>
                                 </div>
                             </div>
@@ -86,7 +86,6 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="index.php">Beranda</a></li>
                                     <li><a href="wisata.php">Wisata</a></li>
-                                    <li><a href="produk_desa.php">Produk Desa</a></li>
                                     <li><a href="tentang_desa.php">Tentang Desa</a></li>
                                     <li><a href="informasi.php">Informasi</a></li>
                                     <li><a href="admin/login.php">Login</a></li>

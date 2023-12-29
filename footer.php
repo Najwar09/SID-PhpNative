@@ -1,7 +1,7 @@
  <!-- Start Footer -->
  <footer class="site-footer">
         <div class="container">
-            <small class="copyright pull-left">Copyright© 2022 <b>Desa Samangki</b>. All right reserved</small>
+            <small class="copyright pull-left">Copyright© 2022 <b>Desa Bonea Timur</b>. All right reserved</small>
             <div class="social-icon pull-right">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>

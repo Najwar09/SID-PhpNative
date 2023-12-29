@@ -12,17 +12,15 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
-  <title>Desa Samangki | Dashboard</title>
+  <title>Desa Bonea Timur | Dashboard</title>
 
-  <meta name="description" content="Desa Samangki">
+  <meta name="description" content="Desa Bonea Timur">
   <meta name="keywords" content="">
   <meta name="author" content="tabthemes">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="../img/samangki/maros.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="../img/samangki/maros_02.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../img/samangki/maros_03.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../img/samangki/maros_04.png">
+  <link rel="shortcut icon" href="../img/bonea/logo_selayar.png">
+
 
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.2 -->
@@ -62,7 +60,7 @@ session_start();
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="#" class="logo"><b>Samangki|</b>Dashboard</a>
+      <a href="#" class="logo"><b>Bonea Timur|</b>Dashboard</a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -71,19 +69,26 @@ session_start();
         </a>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
+            <?php
+              if ($_SESSION['level']['role'] == 'staff'){
+            ?>
+            <li>
+              <a href="absen.php" class="btn btn-warning">ABSEN STAFF</a>
+            </li>
+            <?php  } ?>
 
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
-                <span class="hidden-xs">Admin | Desa Samangki</span>
+                <span class="hidden-xs">Admin | Desa Bonea Timur</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                   <p>
-                    Admin | Desa Samangki
+                    Admin | Desa Bonea Timur
                     <small>Member since Nov. 2012</small>
                   </p>
                 </li>
@@ -111,7 +116,7 @@ session_start();
             <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
           </div>
           <div class="pull-left info">
-            <p>Admin | Desa Samangki</p>
+            <p>Admin | Desa Bonea Timur</p>
 
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -119,7 +124,7 @@ session_start();
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-          <li class="header">DASHBOARD DESA SAMANGKI</li>
+          <li class="header">DASHBOARD DESA BONEA TIMUR</li>
           <li class="active treeview">
 
           <li class="active"><a href="super_dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -127,14 +132,30 @@ session_start();
           </li>
 
           <li class="treeview">
-            <?php if ($_SESSION['level'] == 1) { ?>
-            <li><a href="user.php"><i class="fa  fa-user"></i> User Desa</a></li>
-            <li><a href="profile.php"><i class="fa fa-group"></i> Profile Desa</a></li>
+            <?php
+            if ($_SESSION['level']['role'] != "kepala_desa") { ?>
+          <li><a href="user.php"><i class="fa  fa-user"></i> User Desa</a></li>
+          <li><a href="profile.php"><i class="fa fa-group"></i> Profile Desa</a></li>
+          <li><a href="wisata.php"><i class="fa fa-camera"></i> Wisata Desa</a></li>
+          <li><a href="informasi.php"><i class="fa fa-file-text-o"></i> Informasi Desa</a></li>
           <?php } ?>
-            <li><a href="wisata.php"><i class="fa fa-camera"></i> Wisata Desa</a></li>
-            <li><a href="produk.php"><i class="fa fa-cutlery"></i> Produk Desa</a></li>
-            <li><a href="informasi.php"><i class="fa fa-file-text-o"></i> Informasi Desa</a></li>
-
+          <?php if ($_SESSION['level']['role'] == 'kepala_desa') {
+          ?>
+        <li><a href="data_absen.php"><i class="fa fa-file-text-o"></i>Data Absen</a></li>
+        <?php } ?>
+        
+        <center><h3 style="color: wheat;">Penduduk</h3></center>
+        
+        <li><a href="data_penduduk.php"><i class="fa fa-file-text-o"></i>Data Penduduk</a></li>
+        <li><a href="data_kk.php"><i class="fa fa-file-text-o"></i>Data KK</a></li>
+        <li><a href="data_kelahiran.php"><i class="fa fa-file-text-o"></i>Data Kelahiran</a></li>
+        <li><a href="data_kematian.php"><i class="fa fa-file-text-o"></i>Data Kematian</a></li>
+        <li><a href="data_pindah.php"><i class="fa fa-file-text-o"></i>Data Pindah</a></li>
+      
+        <center><h3 style="color: wheat;">Persuratan</h3></center>
+      
+        <li><a href="surat_masuk.php"><i class="fa fa-file-text-o"></i>Surat Masuk</a></li>
+        <li><a href="surat_keluar.php"><i class="fa fa-file-text-o"></i>Surat Keluar</a></li>
 
         </li>
 

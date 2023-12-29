@@ -1,6 +1,6 @@
 <?php
     // koneksi db
-    $conn = mysqli_connect("localhost", "root", "", "desa_samangki");
+    $conn = mysqli_connect("localhost", "root", "", "db_desa");
 
     
     // function untuk tiap query SELECT
@@ -31,7 +31,8 @@
             $nama = $data['nama'];
             $username = $data['user'];
             $password = $data['pass'];
-            $query = "INSERT INTO tb_login (nama, username, password, profile) VALUES ('$nama', '$username', '$password', '$gambar')";
+            $role = "staff"; 
+            $query = "INSERT INTO tb_login (nama, username, password, profile, role) VALUES ('$nama', '$username', '$password', '$gambar' ,'$role')";
         }
         elseif ($no_file == 2){
             $judul = $data['judul'];
@@ -102,13 +103,13 @@
             $fileDIR = "../img/profile/";
         }
         elseif ($no_upload == 2) {
-            $fileDIR = "../img/samangki/wisata/";
+            $fileDIR = "../img/bonea/wisata/";
         }
         elseif ($no_upload == 3) {
-            $fileDIR = "../img/samangki/produk/";
+            $fileDIR = "../img/bonea/produk/";
         }
         elseif ($no_upload == 4) {
-            $fileDIR = "../img/samangki/informasi/";
+            $fileDIR = "../img/bonea/informasi/";
         }
         else {
             return false;
@@ -206,6 +207,7 @@
         }
         
         
+        
 
         mysqli_query($conn, $query);
         
@@ -234,6 +236,30 @@
         }
         elseif ($no_file == 4) {
             $sql = "DELETE FROM tb_informasi WHERE id_informasi = $id";
+        }
+        elseif ($no_file == 5) {
+            $sql = "DELETE FROM absen WHERE id_absen = $id";
+        }
+        elseif ($no_file == 6) {
+            $sql = "DELETE FROM tb_data_penduduk WHERE id_penduduk = $id";
+        }
+        elseif ($no_file == 7) {
+            $sql = "DELETE FROM tb_kk WHERE id_kk = $id";
+        }
+        elseif ($no_file == 8) {
+            $sql = "DELETE FROM tb_lahiran WHERE id_lahiran = $id";
+        }
+        elseif ($no_file == 9) {
+            $sql = "DELETE FROM tb_kematian WHERE id_mati =  $id";
+        }
+        elseif ($no_file == 10) {
+            $sql = "DELETE FROM tb_data_pindah WHERE id_pindah =  $id";
+        }
+        elseif ($no_file == 11) {
+            $sql = "DELETE FROM tb_surat_masuk WHERE id_masuk =  $id";
+        }
+        elseif ($no_file == 12) {
+            $sql = "DELETE FROM tb_surat_keluar WHERE id_keluar =  $id";
         }
         else{
             return false;

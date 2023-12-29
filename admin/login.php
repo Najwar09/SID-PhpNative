@@ -1,4 +1,7 @@
 <?php
+
+use kcfinder\session;
+
 require '../function/function.php';
 session_start();
 session_unset();
@@ -6,7 +9,6 @@ if (isset($_POST['submit'])) {
 
   $username = $_POST['user'];
   $password = $_POST['pass'];
-  $level = $_POST['level'];
 
   // var_dump($_POST);
 
@@ -18,16 +20,14 @@ if (isset($_POST['submit'])) {
 
   // echo $cek;
   if ($cek > 0) {
-    $validasi = mysqli_fetch_assoc($data);
-
-    if ($validasi['id_login'] == 1) {
-      $_SESSION['level'] = $validasi['id_login'];
-      // var_dump($_SESSION['level']);
-      header("Location: super_dashboard.php");
-    } else {
-      $_SESSION['level'] = null;
-      header("Location: super_dashboard.php");
-    }
+    $isi = mysqli_fetch_assoc($data);
+    $_SESSION['level'] = $isi;
+    if ($isi['role'] == 'staff') {
+      echo '<script>alert("Login Sukses");window.location="super_dashboard.php";</script>';
+  } else {
+      echo '<script>alert("Login Sukses!");window.location="super_dashboard.php";</script>';
+  }
+    
   } else {
     echo "<script>
           alert('Gagal gemink');
@@ -43,17 +43,17 @@ if (isset($_POST['submit'])) {
 
 <head>
   <meta charset="UTF-8">
-  <title>Desa Samangki | Log in</title>
+  <title>Desa Bonea Timur | Log in</title>
 
-  <meta name="description" content="Desa Samangki">
+  <meta name="description" content="Desa Bonea Timur">
   <meta name="keywords" content="">
   <meta name="author" content="tabthemes">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="../img/samangki/maros.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="../img/samangki/maros_02.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../img/samangki/maros_03.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../img/samangki/maros_04.png">
+  <link rel="shortcut icon" href="../img/bonea/maros.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/bonea/maros_02.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../img/bonea/maros_03.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../img/bonea/maros_04.png">
 
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.2 -->
@@ -75,10 +75,10 @@ if (isset($_POST['submit'])) {
     <![endif]-->
 </head>
 
-<body class="login-page" style="background-image:url(../img/samangki/bg.jpg)">
+<body class="login-page" style="background-image:url(../img/bonea/bg.jpg)">
   <div class="login-box">
     <div class="login-logo text-uppercase">
-      <b>Admin</b>| Desa Samangki
+      <b>Admin</b>| Desa Bonea Timur
     </div><!-- /.login-logo -->
     <div class="login-box-body rounded">
       <form action="" method="post">

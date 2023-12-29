@@ -22,7 +22,7 @@ $query_detail = view("SELECT * FROM tb_wisata WHERE id_wisata = $id");
 
                     <?php while ($row = mysqli_fetch_array($query_detail)) : ?>
                         <div class="postMedia">
-                            <img alt="" src="img/samangki/wisata/<?= $row['gambar_utama'] ?>">
+                            <img alt="" src="img/bonea/wisata/<?= $row['gambar_utama'] ?>">
                         </div>
 
 
@@ -65,7 +65,7 @@ $query_detail = view("SELECT * FROM tb_wisata WHERE id_wisata = $id");
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="img/samangki/wisata/<?= $row['gambar_utama'] ?>" alt="...">
+                    <img src="img/bonea/wisata/<?= $row['gambar_utama'] ?>" alt="...">
                     <div class="caption">
                         <h6><?= $row['judul'] ?></h6>
                         <p><?= $cut_info ?></p>

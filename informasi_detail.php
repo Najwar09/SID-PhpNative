@@ -25,7 +25,7 @@ $query_info_detail = view("SELECT * FROM tb_informasi WHERE id_informasi = $id")
                     ?>
 
                         <div class="postMedia">
-                            <img alt="" src="img/samangki/informasi/<?= $row['gambar'] ?>">
+                            <img alt="" src="img/bonea/informasi/<?= $row['gambar'] ?>">
                         </div>
                         <!--Post image-->
 
@@ -82,7 +82,7 @@ $query_info_detail = view("SELECT * FROM tb_informasi WHERE id_informasi = $id")
 
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail">
-                            <img src="img/samangki/informasi/<?= $row['gambar'] ?>" alt="...">
+                            <img src="img/bonea/informasi/<?= $row['gambar'] ?>" alt="...">
                             <div class="caption">
                                 <h6><?= $row['judul'] ?></h6>
                                 <p><?= $cut_info ?></p>

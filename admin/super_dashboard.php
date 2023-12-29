@@ -30,7 +30,7 @@ $query_user = mysqli_query($conn, "SELECT * FROM tb_login");
   <section class="content">
     <!-- Small boxes (Stat box) -->
     <div class="row">
-      <?php if ($_SESSION['level'] == 1) { ?>
+      <?php if ($_SESSION['level']['role'] == 'staff') { ?>
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-maroon">
@@ -100,6 +100,11 @@ $query_user = mysqli_query($conn, "SELECT * FROM tb_login");
           </div>
         </div><!-- ./col -->
 
+        
+
+        
+        
+
       <?php } else {
       ?>
         <div class="col-lg-3 col-xs-6">
@@ -117,6 +122,7 @@ $query_user = mysqli_query($conn, "SELECT * FROM tb_login");
             </div>
             <a href="wisata.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
+          
         </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -135,6 +141,8 @@ $query_user = mysqli_query($conn, "SELECT * FROM tb_login");
             <a href="produk.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div><!-- ./col -->
+
+      
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->

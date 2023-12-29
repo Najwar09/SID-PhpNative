@@ -8,13 +8,13 @@
 
 
     <!-- Start Intro -->
-    <section class="parallax-bg" style="background-image:url(img/samangki/bg.jpg)" data-stellar-background-ratio="0.5">
+    <section class="parallax-bg" style="background-image:url(img/bonea/bg.jpg)" data-stellar-background-ratio="0.5">
         <!-- Section Title -->
         <div class="js-height-full container">
             <div class="intro-content white-color text-center vertical-section">
                 <div class="vertical-content">
                     <h4 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.8s">Selamat Datang di</h4>
-                    <h1 class="wow zoomIn m-bottom-20" data-wow-duration="1s" data-wow-delay="0.6s">Desa Samangki</h1>
+                    <h1 class="wow zoomIn m-bottom-20" data-wow-duration="1s" data-wow-delay="0.6s">Desa Bonea Timur</h1>
                 </div>
             </div>
         </div>

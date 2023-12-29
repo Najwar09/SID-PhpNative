@@ -8,17 +8,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Desa Samangki | Dashboard</title>
+    <title>Desa Bonea Timur | Dashboard</title>
 
-    <meta name="description" content="Desa Samangki">
+    <meta name="description" content="Desa Bonea Timur ">
     <meta name="keywords" content="">
     <meta name="author" content="tabthemes">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="../img/samangki/maros.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../img/samangki/maros_02.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../img/samangki/maros_03.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../img/samangki/maros_04.png">
+    <link rel="shortcut icon" href="../img/bonea/logo.png">
+ 
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
@@ -57,7 +55,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="#" class="logo"><b>Samangki|</b>Dashboard</a>
+        <a href="#" class="logo"><b>Bonea|</b>Dashboard</a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -71,15 +69,15 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                  <span class="hidden-xs">Admin | Desa Samangki</span>
+                  <span class="hidden-xs">Admin | Desa Bonea Timur</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
-                      Admin | Desa Samangki
-                      <small>Member since Nov. 2012</small>
+                      Admin | Desa Bonea Timur
+                      <small>Member since Nov. 2023</small>
                     </p>
                   </li>
                   
@@ -106,7 +104,7 @@
               <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Admin | Desa Samangki</p>
+              <p>Admin | Desa Bonea Timur</p>
 
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -114,7 +112,7 @@
           
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">DASHBOARD DESA SAMANGKI</li>
+            <li class="header">DASHBOARD DESA BONEA TIMUR</li>
             <li class="active treeview">
               
                 <li class="active"><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
