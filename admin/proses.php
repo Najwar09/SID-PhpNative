@@ -126,7 +126,8 @@ if ($_GET['id'] == 'suratmasuk') {
     );
 
 
-    $query2 = "INSERT INTO tb_surat_masuk VALUES('','".$dataarr['id_masuk']. "','" .$dataarr['no_surat']. "','" .$dataarr['tgl_surat']. "','" .$dataarr['tgl_terima']. "','" .$dataarr['asal_surat']. "','" .$dataarr['perihal']. "','" .$dataarr['file'];
+    $query2 = "INSERT INTO tb_surat_masuk VALUES('', '" .$dataarr['no_surat']. "', '" .$dataarr['tgl_surat']. "', '" .$dataarr['tgl_terima']. "', '" .$dataarr['asal_surat']. "', '" .$dataarr['perihal']. "', '" .$dataarr['file']. "')";
+    // $query2 = "INSERT INTO tb_surat_masuk VALUES('','".$dataarr['id_masuk']. "','" .$dataarr['no_surat']. "','" .$dataarr['tgl_surat']. "','" .$dataarr['tgl_terima']. "','" .$dataarr['asal_surat']. "','" .$dataarr['perihal']. "','" .$dataarr['file'];
     $hasil = mysqli_query($conn, $query2);
 
     echo '<script>alert("Berhasil Tambah Data Surat Masuk!");history.go(-2);</script>';
@@ -141,7 +142,28 @@ if ($_GET['id'] == 'suratkeluar') {
     $tgl_surat = $_POST['tgl_surat'];
     $tgl_kirim = $_POST['tgl_kirim'];
 
-    $query2 = "INSERT INTO tb_surat_keluar VALUES('','$no_surat','$perihal','$tujuan','$tgl_surat','$tgl_kirim')";
+    $namafile = $_FILES['berkas']['name'];
+    $x = explode(".", $namafile);
+    $ekstensifile = strtolower(end($x));
+    $ukuranfile = $_FILES['berkas']['size'];
+    $file_tmp = $_FILES['berkas']['tmp_name'];
+
+    $dirUpload = '../file/';
+    $linkBerkas = $dirUpload.$namafile;
+
+    $terupload = move_uploaded_file($file_tmp,$linkBerkas);
+    $dataarr = array(
+        'id_keluar' => '',
+        'no_surat' => $no_surat,
+        'perihal' => $perihal,
+        'tujuan' => $tujuan,
+        'tgl_surat' => $tgl_surat,
+        'tgl_kirim' => $tgl_kirim,
+        'file' => $linkBerkas,
+    );
+
+    $query2 = "INSERT INTO tb_surat_keluar VALUES('', '" .$dataarr['no_surat']. "', '" .$dataarr['perihal']. "', '" .$dataarr['tujuan']. "', '" .$dataarr['tgl_surat']. "', '" .$dataarr['tgl_kirim']. "', '" .$dataarr['file']. "')";
+    // $query2 = "INSERT INTO tb_surat_keluar VALUES('','$no_surat','$perihal','$tujuan','$tgl_surat','$tgl_kirim')";
     $hasil = mysqli_query($conn, $query2);
 
     echo '<script>alert("Berhasil Tambah Data Surat Keluar!");history.go(-2);</script>';

@@ -43,6 +43,7 @@ $query_keluar = view("SELECT * FROM tb_surat_keluar");
                                     <th>Tujuan</th>
                                     <th>Tanggal Surat</th>
                                     <th>Tanggal Kirim</th>
+                                    <th>File PDF</th>
                                     <th>Action</th>
                                     
                                 </tr>
@@ -61,6 +62,7 @@ $query_keluar = view("SELECT * FROM tb_surat_keluar");
                                     <td><?= $row['tujuan'] ?></td>
                                     <td><?= $row['tgl_surat'] ?></td>
                                     <td><?= $row['tgl_kirim'] ?></td>
+                                    <td><a href='downloadfile.php?file=<?= $row["file"]; ?>' class="btn btn-success">Download</a></td>
                              
 
                                     <td>

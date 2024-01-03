@@ -76,6 +76,10 @@ if (isset($_POST['submit'])) {
                                 <label>Tanggal Kirim</label>
                                 <input class="form-control" type="date" name="tgl_kirim" rows="6" placeholder="Enter ...">
                             </div>
+                            <div class="form-group">
+                                <label>File PDF</label>
+                                <input class="form-control" name="berkas" rows="6" placeholder="Enter ..." type="file" accept="application/pdf">
+                            </div>
 
                             
 
